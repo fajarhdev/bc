@@ -1,0 +1,132 @@
+<%- include('layouts/header')  %> 
+<body>
+    <%- include('layouts/nav')  %> 
+    <div class="container vh-100">
+        <div class="row align-items-center">
+            <div class="col-lg-12 text-center my-5">
+                <img src="images/wallet.png" class="img" alt="wallet-icon" style="width: 300px;">
+            </div>
+            <div class="col-lg-12 text-center mb-3">
+                <h1 class="fs-2">PU Wallet</h1>
+            </div>
+            <div class="col-lg-4 text-center m-auto">
+                <p class="fs-6 text-center">PU Wallet is serving you to got a high class content education by deliver the right content with PU Coin, and with PU Coin you can get access premium content that provided by President University.</p>
+            </div>
+            <div class="col-lg-12 text-center my-5">
+                <!-- Button trigger modal login -->
+                <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modelId" value="Login">
+                    Login
+                </button>
+                <!-- Button trigger modal register -->
+                <!-- <button type="button" class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#registerId" value="Register">
+                  Register
+                </button> -->
+
+                <!-- <a name="btn" id="btn" class="btn btn-primary" href="/login" role="button">Login</a>   -->
+                <!-- <a name="btn" id="btn" class="btn btn-primary" href="https://rei-dapp1.herokuapp.com/login" role="button">Login</a>   -->
+            </div>
+        </div>
+    </div>
+    <%- include('layouts/footer')  %> 
+
+
+<!-- Modal login-->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+                <div class="modal-header">
+                        <h5 class="modal-title" id="modelTitleId">Login</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <!-- form login -->
+                    <form class="row g-3 needs-validation" action="/login" novalidate>
+                      <div class="col-md-12">
+                        <label for="validationCustomUsername" class="form-label">Username</label>
+                        <div class="input-group">
+                          <span class="input-group-text" id="inputGroupPrepend">@</span>
+                          <input type="text" class="form-control" name="username" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                          <div class="invalid-feedback">
+                            Please choose a username.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <label for="validationCustom03" class="form-label">Email</label>
+                        <input type="email" class="form-control" name="email" id="validationCustom03" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid email.
+                        </div>
+                      </div>
+                      <div class="col-md-12 mb-2">
+                        <label for="validationCustom03" class="form-label">Password</label>
+                        <input type="password" class="form-control" name="password" id="validationCustom03" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid password.
+                        </div>
+                      <div class="col-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                          <label class="form-check-label" for="invalidCheck">
+                            Agree to terms and conditions
+                          </label>
+                          <div class="invalid-feedback">
+                            You must agree before submitting.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 ms-auto mt-2">
+                        <button class="btn btn-primary" type="submit">login</button>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#registerId" value="Register">
+                          Register
+                        </button>
+                      </div>
+                    </form> 
+                </div>
+            </div>
+            <div cla~ss="modal-footer">
+                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                <!-- <a class="btn btn-primary" href="/register">Register</a> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- register modal -->
+
+<div class="modal fade" id="registerId" tabindex="-1" role="dialog" aria-labelledby="modalTitleRegisterId" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitleRegisterId">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Body
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+        var modelId = document.getElementById('modelId');
+
+        modelId.addEventListener('shown.bs.modal', function (event) {
+            // Button that triggered the modal
+            let button = event.relatedTarget;
+            // Extract info from data-bs-* attributes
+            let recipient = button.getAttribute('data-bs-whatever');
+
+          // Use above variables to manipulate the DOM
+      });
+</script>
+</body>
+<% include('layouts/closer')  %>
+
+

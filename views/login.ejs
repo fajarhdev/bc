@@ -1,0 +1,27 @@
+<%- include('layouts/header') %> 
+<body>
+    <h1 class="fs-2 text-center my-5">Login</h1>
+    <div class="container my-5">
+        <!-- form login -->
+        <form class="row g-3 needs-validation" action="/login" novalidate>
+            <div class="col-md-12">
+              <label for="validationCustom03" class="form-label">Email</label>
+              <input type="email" class="form-control" name="email" id="validationCustom03" required>
+              <div class="invalid-feedback">
+                Please provide a valid email.
+              </div>
+            </div>
+            <form class="col-md-12 mb-2">
+              <label for="validationCustom03" class="form-label">Password</label>
+              <input type="password" class="form-control" name="password" id="validationCustom03" required>
+              <div class="invalid-feedback">
+                Please provide a valid password.
+              </div>
+            <div class="col-12 ms-auto mt-2">
+              <button class="btn btn-primary" type="submit">login</button>
+              <a name="regis" id="regis" class="btn btn-secondary" href="/register" role="button">Register</a>
+            </div>
+        </form>    
+    </div>
+</body>
+<%- include('layouts/closer') %> 
